@@ -6,7 +6,7 @@ const Layout = ({children}) => {
   return (
     <div className = {classes.Layout}>
       <Toolbar/>
-      <Drawer/>
+      <Drawer />
      {children}
     </div>
   )

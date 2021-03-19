@@ -1,4 +1,4 @@
-import Drawer from "./components/Drawer/Drawer";
+import "./App.css"
 import Layout from "./components/Layout/Layout";
 
 
@@ -8,7 +8,6 @@ function App() {
       <Layout>
         Awesome builder by Aiylcheva Tamara
       </Layout>
-      <Drawer></Drawer>
     </div>
   );
 }
