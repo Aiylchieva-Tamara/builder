@@ -1,0 +1,8 @@
+.AquariumPreview{
+    background-color: rgb(13, 165, 165);
+
+    flex: 0 0 250px;
+    border-radius: 1rem;
+    color: white;
+    padding: 1rem;
+}
