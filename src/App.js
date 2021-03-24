@@ -1,5 +1,5 @@
-import AquariumBuilder from "./components/AquariumBuilder/AquariumBuilder";
 import Layout from "./components/Layout/Layout";
+import AquariumBuilder from "./components/AquariumBuilder/AquariumBuilder";
 import "./App.css";
 
 function App() {
