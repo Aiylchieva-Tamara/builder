@@ -7,7 +7,9 @@ const Toolbar = ({ openDrawer }) => {
   return (
     <div className={classes.Toolbar}>
       <Logo />
-      <Nav />
+      <nav>
+        <Nav />
+      </nav>
       <DrawerOpen click={openDrawer} />
     </div>
   );
