@@ -7,7 +7,8 @@
 
   font-size: 2rem;
   color: white;
-  background-color: tomato;
+  background-color: rgb(97, 217, 247);
+   /* background-color: rgb(97, 217, 247); */
   box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
@@ -16,3 +17,5 @@
     display: none;
   }
 }
+
+ 
