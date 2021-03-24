@@ -4,12 +4,12 @@ import AquariumControls from "./AquariumControls/AquariumControls";
 
 const AquariumBuilder = () => {
   const ingredients = {
-    tomato: 20,
-    salami: 20,
-    greenOlive: 20,
-    blackOlive: 20,
-    redPepper: 20,
-    yellowPepper: 15,
+    tomato: 10,
+    salami: 10,
+    greenOlive: 10,
+    blackOlive: 10,
+    redPepper: 10,
+    yellowPepper: 25,
   };
 
   return (
