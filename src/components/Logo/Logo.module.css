@@ -1,8 +1,10 @@
-.Logo{
+  .Logo {
     display: flex;
     align-items: center;
-}
-.Logo img {
-    height: 3rem;
+  }
+  .Logo img {
+    height: 3.5rem;
     margin: .5rem;
+    /* border: 1px solid rgb(21, 130, 180); */
+    border-radius: 50px;
   }
