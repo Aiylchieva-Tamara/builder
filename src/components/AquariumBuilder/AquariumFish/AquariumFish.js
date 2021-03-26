@@ -1,21 +1,24 @@
 import classes from "./AquariumFish.module.css";
 
-import salamiBackground from "../../../images/aquarium.jpg";
-import tomatoBackground from "../../../images/aquariumfish.jpg";
-import blackOliveBackground from "../../../images/aquariumocean.jpg";
-import greenOliveBackground from "../../../images/aquarium.jpg";
-import redPepperBackground from "../../../images/samec-pecilii.jpg";
-import yellowPepperBackground from "../../../images/golden.jpg";
+import labeoBackground from "../../../images/labeoTailand.png";
+import coliasisBackground from "../../../images/coliasis.png";
+import angelBackground from "../../../images/angel.png";
+import blueBackground from "../../../images/blue.png";
+import yelowBackground from "../../../images/yelow.png";
+import clownBackground from "../../../images/clown.png";
 
 const AquariumFish = ({ type }) => {
   const types = {
-    salami: { backgroundImage: `url(${salamiBackground})`, width: "35px", height: "35px" },
-    tomato: { backgroundImage: `url(${tomatoBackground})`, width: "35px", height: "35px" },
-    blackOlive: { backgroundImage: `url(${blackOliveBackground})`, width: "10px", height: "10px" },
-    greenOlive: { backgroundImage: `url(${greenOliveBackground})`, width: "10px", height: "10px" },
-    redPepper: { backgroundImage: `url(${redPepperBackground})`, width: "20px", height: "20px" },
-    yellowPepper: { backgroundImage: `url(${yellowPepperBackground})`, width: "40px", height: "40px" },
+    labeo: { backgroundImage: `url(${labeoBackground})`, width: "95px", height: "80px" },
+    coliasis: { backgroundImage: `url(${coliasisBackground})`, width: "48px", height: "43px" },
+    angel: { backgroundImage: `url(${angelBackground})`, width: "48px", height: "46px" },
+    blue: { backgroundImage: `url(${blueBackground})`, width: "50px", height: "40px" },
+    yelow: { backgroundImage: `url(${yelowBackground})`, width: "50px", height: "40px" },
+    clown: { backgroundImage: `url(${clownBackground})`, width: "45px", height: "38px" },
   };
+
+  types[type].top = Math.round(Math.random() * 380);
+  types[type].left = Math.round(Math.random() * 380);
 
   function getPosition(ingredientWidth) {
     const pizzaDiameter = 380;
@@ -42,7 +45,7 @@ const AquariumFish = ({ type }) => {
   types[type].top = position.top + "px";
   types[type].left = position.left + "px";
   // Get random rotation for this ingredient.
-  types[type].transform = `rotate(${Math.round(Math.random() * 360)}deg)`;
+  // types[type].transform = `rotate(${Math.round(Math.random() * 360)}deg)`;
 
   return (
     <div className={classes.AquariumFish} style={types[type]}></div>

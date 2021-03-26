@@ -1,6 +1,6 @@
 import AquariumFish from "../AquariumFish/AquariumFish";
 import classes from "./AquariumPreview.module.css";
-import fishBackground from "../../../images/ocean.jpg";
+import fishBackground from "../../../images/aquariumocean.jpg";
 
 const AquariumPreview = ({ ingredients }) => {
   const result = [];

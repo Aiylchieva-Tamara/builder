@@ -1,0 +1,26 @@
+.AquariumControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.AquariumControl div{
+    position: static;
+    margin: 0 1rem;
+}
+.AquariumControl button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    border: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+.AquariumControl button:hover{
+    background-color: aqua;
+    color: blueviolet;
+    cursor: pointer;
+}
