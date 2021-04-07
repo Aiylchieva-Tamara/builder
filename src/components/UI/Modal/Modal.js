@@ -22,4 +22,3 @@ const Modal = ({ show, children, cancel }) => {
 }
 
 export default Modal;
-© 2021 GitHub, Inc.
