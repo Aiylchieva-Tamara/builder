@@ -1,8 +1,10 @@
 .AquariumControls {
-    flex: 0 0 250px;
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: #11b9b9;
-    color: white;
-  }
+  flex: 0 0 250px;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: rgb(134, 239, 247);
+  color: white;
+  text-align: center;
+}
+  
   

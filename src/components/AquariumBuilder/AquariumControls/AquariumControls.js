@@ -1,17 +1,33 @@
+import Button from "../../UI/Button/Button";
 import AquariumControl from "./AquariumControl/AquariumControl";
 import classes from "./AquariumControls.module.css";
 
-const AquariumControls = ({ingredients, addIngredient, removeIngredient}) => {
- let type={ingredients}
-  const results =[];
+const AquariumControls = ({
+  ingredients,
+  addIngredient,
+  removeIngredient,
+  startOrdering
+}) => {
+  const results = [];
+  let total = 0;
   for (const ingredient in ingredients) {
-    results.push(<AquariumControl  type={ingredient}
-     addIngredient={addIngredient} 
-    removeIngredient={removeIngredient} />
-    )} ;
- 
+    // Add ingredient number to totals number
+    total += ingredients[ingredient];
+    // Render pizza control for this ingredient
+    results.push(<AquariumControl
+        key={ingredient}
+        addIngredient={addIngredient}
+        removeIngredient={removeIngredient}
+        count={ingredients[ingredient]}
+        type={ingredient} />)
+  }
+
   return (
-    <div className={classes.AquariumControls}>{results}</div>
+    <div className={classes.AquariumControls}>
+      <strong>Ingredients</strong>
+      {results}
+      <Button disabled={!total} onClick={startOrdering}>Order</Button>
+    </div>
   );
 }
 
