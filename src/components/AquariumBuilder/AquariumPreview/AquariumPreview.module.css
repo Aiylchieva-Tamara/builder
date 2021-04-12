@@ -10,10 +10,7 @@
   height: 400px;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  
   background-color: #76dcee;
   border-radius: 15px;
   display: flex;
