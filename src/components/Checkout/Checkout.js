@@ -1,7 +1,10 @@
+import CheckoutSummary from "./CheckoutSummary/CheckoutSummary"
+
 const Checkout = () => {
-    return (
-      <div>Checkout</div>
-    );
-  }
-  
-  export default Checkout; 
+  return (
+    
+    <div>
+      <CheckoutSummary />
+    </div>
+  );
+}
