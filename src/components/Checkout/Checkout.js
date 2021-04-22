@@ -1,10 +1,16 @@
 import CheckoutSummary from "./CheckoutSummary/CheckoutSummary"
 
-const Checkout = () => {
+
+const Checkout = ({ history }) => {
+  function cancelCallback() {
+    history.replace('/');
+  }
+
   return (
-    
     <div>
-      <CheckoutSummary />
+     
+      <CheckoutSummary cancelCallback={cancelCallback} />
     </div>
   );
 }
+export default Checkout;

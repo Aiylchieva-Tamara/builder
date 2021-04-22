@@ -1,22 +1,26 @@
 
 import classes from "./CheckoutSummary.module.css";
-import PizzaPreview from "../../PizzaBuilder/PizzaPreview/PizzaPreview";
+import AquariumPreview from "../../AquariumBuilder/AquariumPreview/AquariumPreview";
 import Button from "../../UI/Button/Button";
 
-const CheckoutSummary = () => {
+const CheckoutSummary = ({ cancelCallback }) => {
   return (
     <div className={classes.CheckoutSummary}>
       <div>
-        <PizzaPreview ingredients={{
-          tomato: 5, 
-          salami: 10,
-          greenOlive: 50,
+        <AquariumPreview ingredients={{
+         coliasis: 10,
+         labeo: 4,
+         blue: 6,
+         angel: 4,
+         yelow: 2,
+         clown: 1,
         }} price={150} />
       </div>
       <div>
         <Button>Checkout</Button>
-        <Button>Cancel</Button>
+        <Button onClick={cancelCallback}>Cancel</Button>
       </div>
     </div>
   );
 }
+export default CheckoutSummary;
