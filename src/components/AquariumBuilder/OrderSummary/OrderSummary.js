@@ -1,4 +1,4 @@
-
+import classes from "./OrderSummary.module.css";
 const OrderSummary = ({ ingredients, price }) => {
     const labels = {
         coliasis: "Coliasis",
@@ -12,7 +12,7 @@ const OrderSummary = ({ ingredients, price }) => {
       .map(type => <li>{labels[type]}: {ingredients[type]}</li>);
   
     return (
-      <div >
+      <div className={classes.OrderSummary}>
         <h3>Order summary</h3>
         <ul>
           {results}

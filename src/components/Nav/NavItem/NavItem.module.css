@@ -3,11 +3,11 @@
     border-bottom: 5px solid transparent;
     text-decoration: none;
     display: block;
-    padding: .5rem 1rem .35rem;
+    padding: .5rem 1rem 20px;
   }
   .NavItem a:hover {
     border-color: white;
-    background-color: rgb(14, 236, 180);
+    background-color: rgb(14, 210, 236);
   }
   .NavItem a:active,
   .NavItem a.active {

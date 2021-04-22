@@ -1,3 +1,28 @@
+
+  @keyframes potAnimation {
+    10%{
+        transform-origin: bottom;
+    }
+    50%{
+        transform: translate(60px);
+        transform-origin: bottom;
+    }
+    100%{
+        transform-origin: bottom;
+    }
+}
 .AquariumFish {
-    position: absolute;
+  position: absolute;
+    background-size: cover;
+    display: flex;
+
+    margin: 10px;
+    animation-name: potAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+
+
   }

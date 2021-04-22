@@ -43,7 +43,8 @@ const AquariumFish = ({ type, fixed }) => {
     types[type].top = position.top + "px";
     types[type].left = position.left + "px";
     // Get random rotation for this ingredient.
-    types[type].transform = `rotate(${Math.round(Math.random() )}deg)`;
+    types[type].transform = `rotate(${Math.round(Math.random() * 40 )}deg)`;
+    
   }
 
 
