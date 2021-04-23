@@ -9,6 +9,7 @@
 .AquariumControl div{
     position: static;
     margin: 0 1rem;
+    animation: none;
 }
 .AquariumControl button{
     width: 2rem;
@@ -19,6 +20,7 @@
     font-size: 1.5rem;
     color: white;
     text-align: center;
+    padding: 0;
 }
 .AquariumControl button:hover{
     background-color: aqua;

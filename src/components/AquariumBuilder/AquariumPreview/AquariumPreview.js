@@ -13,10 +13,10 @@ const AquariumPreview = ({ ingredients, price }) => {
 
   return (
     <div className={classes.AquariumPreview}>
-      <div className={classes.aquarium}>
+      <div className={classes.aquarium}
+       style={{ backgroundImage: `url(${fishBackground})`}}>
         <div
-          className={classes.ingredients}
-          style={{ backgroundImage: `url(${fishBackground})` }}>
+          className={classes.ingredients}>
           {result}
         </div>
       </div>

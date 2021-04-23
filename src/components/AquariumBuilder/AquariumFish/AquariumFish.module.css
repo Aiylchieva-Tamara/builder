@@ -4,7 +4,7 @@
         transform-origin: bottom;
     }
     50%{
-        transform: translate(60px);
+        transform: translate(25px);
         transform-origin: bottom;
     }
     100%{
@@ -12,17 +12,14 @@
     }
 }
 .AquariumFish {
-  position: absolute;
+    position: absolute;
     background-size: cover;
     display: flex;
 
-    margin: 10px;
+   padding-left: -60px;
     animation-name: potAnimation;
     animation-iteration-count: infinite;
     animation-duration: 4s;
     animation-direction: alternate;
     animation-timing-function: linear;
-
-
-
   }
