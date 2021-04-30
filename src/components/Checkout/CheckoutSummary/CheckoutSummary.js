@@ -8,11 +8,11 @@ const CheckoutSummary = ({ cancelCallback }) => {
     <div className={classes.CheckoutSummary}>
       <div>
         <AquariumPreview ingredients={{
-         coliasis: 10,
-         labeo: 4,
-         blue: 6,
-         angel: 4,
-         yelow: 2,
+         coliasis: 1,
+         labeo: 1,
+         blue: 1,
+         angel: 1,
+         yelow: 1,
          clown: 1,
         }} price={150} />
       </div>
