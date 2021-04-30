@@ -19,17 +19,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  
 }
 .ingredients {
   width: 380px;
   height: 380px;
   border-radius: 5px;
   position: relative;
-
   
 }
 .price {
-  background-color: rgb(14, 224, 196);
+  background-color: rgb(16, 209, 243);
   border-radius: 1rem;
   padding: 0 1rem;
   font-size: 1.5rem;
