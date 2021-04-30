@@ -1,25 +1,31 @@
 
-  @keyframes potAnimation {
-    10%{
-        transform-origin: bottom;
-    }
-    50%{
-        transform: translate(25px);
-        transform-origin: bottom;
-    }
-    100%{
-        transform-origin: bottom;
-    }
+  @keyframes fish {
+      0%{
+         transform: translate(0, 0) rotateY(180deg);
+      }
+      50%{
+        transform: translate(180px, 0px) rotateY(180deg);
+     }
+     51%{
+        transform: translate(180px, 0) rotateY(0deg);
+     }
+     100%{
+        transform: translate(0, 0) rotateY(0deg);
+       
+     }
+ 
+   
 }
+
 .AquariumFish {
     position: absolute;
-    background-size: cover;
-    display: flex;
 
-   padding-left: -60px;
-    animation-name: potAnimation;
+    
+    animation-name: fish;
     animation-iteration-count: infinite;
-    animation-duration: 4s;
-    animation-direction: alternate;
+    animation-duration:15s;
+    animation-direction: reverse;
     animation-timing-function: linear;
+    
   }
+  

@@ -14,7 +14,7 @@ const CheckoutSummary = ({ cancelCallback }) => {
          angel: 1,
          yelow: 1,
          clown: 1,
-        }} price={150} />
+        }} price={1930} />
       </div>
       <div>
         <Button>Checkout</Button>

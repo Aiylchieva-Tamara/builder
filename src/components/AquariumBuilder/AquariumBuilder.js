@@ -7,14 +7,14 @@ import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
 
-const AquariumBuilder = () => {
+const AquariumBuilder = ({ history }) => {
   const prices = {
-    coliasis: 3.5,
-    labeo: 4,
-    blue: 0.3,
-    angel: 0.3,
-    yelow: 2,
-    clown: 1,
+    coliasis: 150,
+    labeo: 400,
+    blue: 330,
+    angel: 200,
+    yelow: 500,
+    clown: 350,
   };
   const [ingredients, setIngredients] = useState({});
   const [price, setPrice] = useState(0);
@@ -24,17 +24,16 @@ const AquariumBuilder = () => {
 
   function loadDefaults() {
     axios
-    .get("https://builder-8d5fc-default-rtdb.firebaseio.com/default.json")
-    .then((response) => {
-      setPrice(response.data.price);
+      .get("https://builder-8d5fc-default-rtdb.firebaseio.com/default.json")
+      .then((response) => {
+        setPrice(response.data.price);
 
-      // For arrays
-      // setIngredients(Object.values(response.data.ingredients));
-      // For objects
-      setIngredients(response.data.fish);
-    });
+        // For arrays
+        // setIngredients(Object.values(response.data.ingredients));
+        // For objects
+        setIngredients(response.data.fish);
+      });
   }
-
 
   function addIngredient(type) {
     const newIngredient = { ...ingredients };
@@ -70,6 +69,7 @@ const AquariumBuilder = () => {
       .then(() => {
         setOrdering(false);
         loadDefaults();
+        history.push("/checkout");
       });
   }
 
@@ -82,18 +82,13 @@ const AquariumBuilder = () => {
         removeIngredient={removeIngredient}
         startOrdering={startOrdering}
       />
-      <Modal
-        show={ordering}
-        cancel={stopOrdering}>
-          <OrderSummary
-        ingredients={ingredients}
-        price={price}
-        />
-          <Button onClick={finishOrdering} green>Checkout</Button>
-          <Button onClick={stopOrdering}>Cancel</Button>
-         
-       
-        </Modal>
+      <Modal show={ordering} cancel={stopOrdering}>
+        <OrderSummary ingredients={ingredients} price={price} />
+        <Button onClick={finishOrdering} green>
+          Checkout
+        </Button>
+        <Button onClick={stopOrdering}>Cancel</Button>
+      </Modal>
     </div>
   );
 };
