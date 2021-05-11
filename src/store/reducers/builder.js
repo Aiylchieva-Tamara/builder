@@ -1,4 +1,3 @@
-
 import { ADD_INGREDIENT, REMOVE_INGREDIENT, SET_INGREDIENTS } from "../actions/types";
 
 const initialState = {
@@ -7,12 +6,12 @@ const initialState = {
   price: 0,
 };
 const prices = {
-  coliasis: 150,
-    labeo: 400,
-    blue: 330,
-    angel: 200,
-    yelow: 500,
-    clown: 350,
+  tomato: 3.5,
+  salami: 4,
+  greenOlive: .3,
+  blackOlive: .3,
+  redPepper: 2,
+  yellowPepper: 1,
 };
 
 const builder = (state = initialState, action) => {
@@ -28,9 +27,7 @@ const builder = (state = initialState, action) => {
       newState.price -= prices[action.ingredient];
       break;
     case SET_INGREDIENTS:
-      newState.ingredients = action.data.ingredients;
-      newState.price = action.data.price;
-      break;
+      return { ...action.data };
   
     default:
       break;
@@ -39,7 +36,4 @@ const builder = (state = initialState, action) => {
   return newState;
 }
 
-
-
 export default builder;
-
