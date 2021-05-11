@@ -4,9 +4,8 @@ import classes from "./AquariumControls.module.css";
 
 const AquariumControls = ({
   ingredients,
-  addIngredient,
-  removeIngredient,
-  startOrdering
+  startOrdering,
+ type
 }) => {
   const results = [];
   let total = 0;
@@ -16,8 +15,6 @@ const AquariumControls = ({
     // Render pizza control for this ingredient
     results.push(<AquariumControl
         key={ingredient}
-        addIngredient={addIngredient}
-        removeIngredient={removeIngredient}
         count={ingredients[ingredient]}
         type={ingredient} />)
   }
