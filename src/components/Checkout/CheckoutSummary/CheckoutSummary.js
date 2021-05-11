@@ -1,26 +1,27 @@
 
 import classes from "./CheckoutSummary.module.css";
-import AquariumPreview from "../../AquariumBuilder/AquariumPreview/AquariumPreview";
+
 import Button from "../../UI/Button/Button";
 
-const CheckoutSummary = ({ cancelCallback }) => {
+const CheckoutSummary = ({ cancelCallback, submitCallback }) => {
   return (
-    <div className={classes.CheckoutSummary}>
+    <form className={classes.CheckoutSummary} onSubmit={submitCallback}>
       <div>
-        <AquariumPreview ingredients={{
-         coliasis: 1,
-         labeo: 1,
-         blue: 1,
-         angel: 1,
-         yelow: 1,
-         clown: 1,
-        }} price={1930} />
+        <label htmlFor="name">Name</label>
+        <input type="text" name="name" id="name" required />
       </div>
       <div>
-        <Button>Checkout</Button>
-        <Button onClick={cancelCallback}>Cancel</Button>
+        <label htmlFor="address">Address</label>
+        <input type="text" name="address" id="address" required />
       </div>
-    </div>
+      <div>
+        <label htmlFor="phone">Phone</label>
+        <input type="text" name="phone" id="phone" required pattern="0[0-9]{9}" />
+      </div>
+      <Button>Checkout</Button>
+      <Button onClick={cancelCallback}>Cancel</Button>
+    </form>
   );
 }
+
 export default CheckoutSummary;
