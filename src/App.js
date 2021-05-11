@@ -3,6 +3,7 @@ import AquariumBuilder from "./components/AquariumBuilder/AquariumBuilder";
 import "./App.css";
 import Checkout from "./components/Checkout/Checkout";
 import { Redirect, Route, Switch } from "react-router";
+import Orders from "./components/Orders/Orders";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Switch>
           <Route path="/" component={AquariumBuilder} exact />
           <Route path="/checkout" component={Checkout} />
+          <Route path="/orders" component={Orders} />
           <Redirect to="/" />
         </Switch>
       </Layout>
