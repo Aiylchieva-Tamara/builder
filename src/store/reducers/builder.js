@@ -6,12 +6,12 @@ const initialState = {
   price: 0,
 };
 const prices = {
-  tomato: 3.5,
-  salami: 4,
-  greenOlive: .3,
-  blackOlive: .3,
-  redPepper: 2,
-  yellowPepper: 1,
+    labeo: 250,
+    coliasis: 300,
+    angel: 200, 
+    blue: 400,
+    yelow: 270,
+    clown:320,
 };
 
 const builder = (state = initialState, action) => {

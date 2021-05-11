@@ -1,11 +1,11 @@
+
 import Button from "../../UI/Button/Button";
 import AquariumControl from "./AquariumControl/AquariumControl";
 import classes from "./AquariumControls.module.css";
 
 const AquariumControls = ({
   ingredients,
-  startOrdering,
- type
+  startOrdering
 }) => {
   const results = [];
   let total = 0;

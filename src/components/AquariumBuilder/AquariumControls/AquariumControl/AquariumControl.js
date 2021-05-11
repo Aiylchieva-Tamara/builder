@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
+import { add, remove } from "../../../../store/actions/builder";
 import Button from "../../../UI/Button/Button";
 import AquariumFish from "../../AquariumFish/AquariumFish";
 import classes from "./AquariumControl.module.css";
-import { add, remove } from "../../../../store/actions/builder";
 
 const AquariumControl = ({ type, count }) => {
   const dispatch = useDispatch();

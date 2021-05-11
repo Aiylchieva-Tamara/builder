@@ -83,4 +83,4 @@ const AquariumBuilder = ({ history }) => {
   );
 };
 
-export default withAxios(PizzaBuilder, axios);
+export default withAxios(AquariumBuilder, axios);
