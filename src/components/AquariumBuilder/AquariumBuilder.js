@@ -1,18 +1,23 @@
 import classes from "./AquariumBuilder.module.css";
 import AquariumPreview from "./AquariumPreview/AquariumPreview";
 import AquariumControls from "./AquariumControls/AquariumControls";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
+import withAxios from "../withAxios";
 import axios from "axios";
 import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { load } from "../../store/actions/builder";
 
 const AquariumBuilder = ({ history }) => {
   
+  const dispatch = useDispatch();
   const ingredients = useSelector(state => state.builder.ingredients);
   const price = useSelector(state => state.builder.price);
   const [ordering, setOrdering] = useState(false);
+
+  useEffect(() => dispatch(load()), [dispatch]);
 
   // useEffect(loadDefaults, []);
 
@@ -43,19 +48,22 @@ const AquariumBuilder = ({ history }) => {
   //   history.push('/checkout');
   // }
   function finishOrdering() {
-    axios
-    .post('https://builder-8d5fc-default-rtdb.firebaseio.com/orders.json',{
-      ingredients: ingredients,
-      price: price,
-      address: "Kadyrova 108/6",
-      phone:"0500023120", 
-      name:"Dogdurbaev Emirlan",
-    })
-    .then(() =>{
-      setOrdering(false);
-      // loadDefaults();
-      history.push('/checkout')
-    })
+    setOrdering(false);
+    // loadDefaults();
+    history.push('/checkout');
+    // axios
+    // .post('https://builder-8d5fc-default-rtdb.firebaseio.com/orders.json',{
+    //   ingredients: ingredients,
+    //   price: price,
+    //   address: "Kadyrova 108/6",
+    //   phone:"0500023120", 
+    //   name:"Dogdurbaev Emirlan",
+    // })
+    // .then(() =>{
+    //   setOrdering(false);
+    //   // loadDefaults();
+    //   history.push('/checkout')
+    // })
   }
   return (
     <div className={classes.AquariumBuilder}>
@@ -68,11 +76,11 @@ const AquariumBuilder = ({ history }) => {
       />
       <Modal show={ordering} cancel={stopOrdering}>
         <OrderSummary ingredients={ingredients} price={price} />
-        <Button onClick={finishOrdering} green>Checkout</Button>
+        <Button onClick={finishOrdering} green="green">Checkout</Button>
           <Button onClick={stopOrdering}>Cancel</Button>
       </Modal>
     </div>
   );
 };
 
-export default AquariumBuilder;
+export default withAxios(PizzaBuilder, axios);
