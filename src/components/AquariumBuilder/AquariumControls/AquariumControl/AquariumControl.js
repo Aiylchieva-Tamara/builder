@@ -9,7 +9,7 @@ const AquariumControl = ({ type, count }) => {
   return (
     <div className={classes.AquariumControl}>
       <Button onClick={() => dispatch(add(type))}>+</Button>
-      <div className={classes.ingredient}>
+      <div className={classes.fish}>
         <AquariumFish type={type} fixed />
       </div>
       <Button onClick={() => dispatch(remove(type))} disabled={!count}>-</Button>

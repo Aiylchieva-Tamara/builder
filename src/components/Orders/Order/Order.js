@@ -1,13 +1,13 @@
 import classes from "./Order.module.css";
 
-const Order = ({ name, phone, address, ingredients, price }) => {
-  const outputIngredients = Object.keys(ingredients)
-    .map(ingredient => <em>{ingredient} - {ingredients[ingredient]}</em>);
+const Order = ({ name, phone, address, fish, price }) => {
+  const outputFish = Object.keys(fish)
+    .map(fish => <em>{fish} - {fish[fish]}</em>);
 
   return (
     <div className={classes.Order}>
       <div>{name}, {phone}, {address}</div>
-      <div>{outputIngredients}</div>
+      <div>{outputFish}</div>
       <strong>{price}</strong>
     </div>
   );

@@ -13,7 +13,7 @@ import { load } from "../../store/actions/builder";
 const AquariumBuilder = ({ history }) => {
   
   const dispatch = useDispatch();
-  const ingredients = useSelector(state => state.builder.ingredients);
+  const fishs = useSelector(state => state.builder.fishs);
   const price = useSelector(state => state.builder.price);
   const [ordering, setOrdering] = useState(false);
 
@@ -28,9 +28,9 @@ const AquariumBuilder = ({ history }) => {
   //       setPrice(response.data.price);
 
   //       // For arrays
-  //       // setIngredients(Object.values(response.data.ingredients));
+  //       // setfish(Object.values(response.data.fish));
   //       // For objects
-  //       setIngredients(response.data.fish);
+  //       setfish(response.data.fish);
   //     });
   // }
   
@@ -53,7 +53,7 @@ const AquariumBuilder = ({ history }) => {
     history.push('/checkout');
     // axios
     // .post('https://builder-8d5fc-default-rtdb.firebaseio.com/orders.json',{
-    //   ingredients: ingredients,
+    //   fish: fish,
     //   price: price,
     //   address: "Kadyrova 108/6",
     //   phone:"0500023120", 
@@ -68,14 +68,14 @@ const AquariumBuilder = ({ history }) => {
   return (
     <div className={classes.AquariumBuilder}>
       <AquariumPreview 
-      ingredients={ingredients} 
+      fishs={fishs} 
       price={price} />
       <AquariumControls
-        ingredients={ingredients}
+        fishs={fishs}
         startOrdering={startOrdering}
       />
       <Modal show={ordering} cancel={stopOrdering}>
-        <OrderSummary ingredients={ingredients} price={price} />
+        <OrderSummary fishs={fishs} price={price} />
         <Button onClick={finishOrdering} green="green">Checkout</Button>
           <Button onClick={stopOrdering}>Cancel</Button>
       </Modal>
