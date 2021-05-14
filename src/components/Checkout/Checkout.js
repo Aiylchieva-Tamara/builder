@@ -2,7 +2,7 @@
 import AquariumPreview from "../AquariumBuilder/AquariumPreview/AquariumPreview";
 import CheckoutSummary from "./CheckoutSummary/CheckoutSummary";
 import classes from "./Checkout.module.css";
-import axios from "axios";
+import axios from "../../axios";
 import { useSelector } from "react-redux";
 import withAxios from "../withAxios";
 
