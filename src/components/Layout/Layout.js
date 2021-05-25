@@ -1,20 +1,16 @@
-import { useState } from "react";
-import classes from "./Layout.module.css";
-import Toolbar from "../Toolbar/Toolbar";
-import Drawer from "../Drawer/Drawer";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { logout } from "../../store/actions/auth";
 
-const Layout = ({ children }) => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+const Logout = ({ history }) => {
+  const dispatch = useDispatch();
 
-  return (
-    <div className={classes.Layout}>
-      <Toolbar openDrawer={() => setDrawerOpen(true)} />
-      <Drawer open={drawerOpen} closeDrawer={() => setDrawerOpen(false)} />
-      <main>
-        {children}
-      </main>
-    </div>
-  );
+  useEffect(() => {
+    dispatch(logout());
+    history.replace("/");
+  }, [dispatch, history]);
+
+  return null;
 }
- 
-export default Layout;
+
+export default Logout; 

@@ -10,7 +10,7 @@ import clownBackground from "../../../images/clown.png";
 
 const AquariumFish = ({ type, fixed }) => {
   const types = {
-    labeo: { backgroundImage: `url(${labeoBackground})`, width: "48px", height: "45px" },
+    labeo: { backgroundImage: `url(${labeoBackground})`, width: "48px", height: "45px"},
     coliasis: { backgroundImage: `url(${coliasisBackground})`, width: "48px", height: "43px" },
     angel: { backgroundImage: `url(${angelBackground})`, width: "48px", height: "46px" },
     blue: {  backgroundImage: `url(${blueBackground})`, width: "50px", height: "40px", transform:"scaleX(-1)"},

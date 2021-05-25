@@ -3,10 +3,10 @@ import AquariumFish from "../AquariumFish/AquariumFish";
 import classes from "./AquariumPreview.module.css";
 import fishBackground from "../../../images/aquariumocean.jpg";
 
-const AquariumPreview = ({ fishs, price }) => {
+const AquariumPreview = ({ fishes, price }) => {
   const result = [];
-  for (const fish in fishs) {
-    for (let i = 0; i < fishs[fish]; i++) {
+  for (const fish in fishes) {
+    for (let i = 0; i < fishes[fish]; i++) {
       result.push(<AquariumFish key={fish + i} type={fish} />)
     }
   }
@@ -16,7 +16,7 @@ const AquariumPreview = ({ fishs, price }) => {
       <div className={classes.aquarium}
        style={{ backgroundImage: `url(${fishBackground})`}}>
         <div
-          className={classes.fishs}>
+          className={classes.fishes}>
           {result}
         </div>
       </div>

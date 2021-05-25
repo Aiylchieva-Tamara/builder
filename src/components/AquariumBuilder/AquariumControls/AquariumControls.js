@@ -4,18 +4,18 @@ import AquariumControl from "./AquariumControl/AquariumControl";
 import classes from "./AquariumControls.module.css";
 
 const AquariumControls = ({
-  fishs,
+  fishes,
   startOrdering
 }) => {
   const results = [];
   let total = 0;
-  for (const fish in fishs) {
+  for (const fish in fishes) {
     // Add fish number to totals number
-    total += fishs[fish];
+    total += fishes[fish];
     // Render pizza control for this fish
     results.push(<AquariumControl
         key={fish}
-        count={fishs[fish]}
+        count={fishes[fish]}
         type={fish} />)
   }
 

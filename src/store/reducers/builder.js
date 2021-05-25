@@ -1,7 +1,7 @@
 import { ADD_FISH, REMOVE_FISH, SET_FISH } from "../actions/types";
 
 const initialState = {
-  fishs: {
+  fishes: {
   },
   price: 0,
 };
@@ -19,11 +19,11 @@ const builder = (state = initialState, action) => {
 
   switch (action.type) {
     case ADD_FISH:
-      newState.fishs[action.fish]++;
+      newState.fishes[action.fish]++;
       newState.price += prices[action.fish];
       break;
     case REMOVE_FISH:
-      newState.fishs[action.fish]--;
+      newState.fishes[action.fish]--;
       newState.price -= prices[action.fish];
       break;
     case SET_FISH:
