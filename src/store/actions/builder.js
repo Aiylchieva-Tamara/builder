@@ -1,5 +1,5 @@
 import axios from "../../axios";
-import { ADD_FISH, REMOVE_FISH, SET_FISH } from "./types";
+import { ADD_FISH, REMOVE_FISH, SET_FISHES } from "./types";
 
 export const add = (fish) => ({
   type: ADD_FISH,
@@ -12,7 +12,7 @@ export const remove = (fish) => ({
 });
 
 export const set = (data) => ({
-  type: SET_FISH,
+  type: SET_FISHES,
   data: data
 });
 

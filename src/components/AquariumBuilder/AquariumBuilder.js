@@ -1,9 +1,9 @@
-import classes from "./AquariumBuilder.module.css";
 import AquariumPreview from "./AquariumPreview/AquariumPreview";
 import AquariumControls from "./AquariumControls/AquariumControls";
-import { useEffect, useState } from "react";
 import withAxios from "../withAxios";
 import axios from "axios";
+import classes from "./AquariumBuilder.module.css";
+import { useEffect, useState } from "react";
 import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";

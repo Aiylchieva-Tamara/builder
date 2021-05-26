@@ -1,4 +1,3 @@
-
 import Button from "../../UI/Button/Button";
 import AquariumControl from "./AquariumControl/AquariumControl";
 import classes from "./AquariumControls.module.css";
@@ -21,7 +20,7 @@ const AquariumControls = ({
 
   return (
     <div className={classes.AquariumControls}>
-      <strong>Fish</strong>
+      <strong>Fishes</strong>
       {results}
       <Button disabled={!total} onClick={startOrdering}>Order</Button>
     </div>
