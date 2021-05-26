@@ -31,7 +31,7 @@ export const restore = () => {
     const localId = localStorage.getItem('localId');
 
     if (idToken && localId) {
-      success(dispatch, { idToken, localId });
+      dispatch(success({ idToken, localId }));
     }
     else {
       dispatch(logout());
