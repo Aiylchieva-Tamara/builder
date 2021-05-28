@@ -5,13 +5,36 @@ form{
     flex-direction: column;
 
 }
+.h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form >div{
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+form >div >button{
+    background-color: white;
+    width: 100px;
+    height: 35px;
+    border: 3px solid rgb(122, 202, 226);
+    border-radius: 5px;
+    margin: 1rem;
+    color: blue;
+    font-size: 20px;
+
+}
 form > input{
     margin: 10px;
     padding: 10px;
     width: 300px;
-    border: 3px solid rgb(22, 139, 175);
+    border: 3px solid rgb(122, 202, 226);
     font-size: 20px;
     border-radius: 5px;
+    background-color: white;
 }
 .Buttons{
     display: flex;
@@ -22,6 +45,7 @@ form > input{
 h1{
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 350px;
     height: 130px;
     padding-left: 10px;
